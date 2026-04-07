@@ -1,11 +1,29 @@
 <!DOCTYPE html>
+
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KConsultancy.asia - Strategic Talent Placement & Manpower Solutions</title>
+    <title>KLIM Coffee — Minimal. Bold. Perfect Coffee.</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+	
+	:root {
+		  --black: #111111;
+		  --charcoal: #222222;
+		  --gray: #777777;
+		  --light-gray: #e5e5e5;
+		  --off-white: #f8f8f8;
+		}
+
+		h1, h2 {
+			font-family: 'Playfair Display', serif;
+			letter-spacing: -0.5px;
+		}
+
         * {
             margin: 0;
             padding: 0;
@@ -26,7 +44,7 @@
 
         /* Header/Navigation Styles */
         header {
-            background: #11224D;
+            background: #ffffff;
             padding: 15px 50px;
             display: flex;
             justify-content: space-between;
@@ -35,7 +53,7 @@
             position: fixed;
             top: 0;
             z-index: 1000;
-            border-bottom: 3px solid #11224D;
+            border-bottom: 3px solid #3e2c23;;
 			width: 100%;
         }
 
@@ -52,8 +70,8 @@
         }
 
         .logo-icon {
-            width: 35px;
-            height: 35px;
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -92,14 +110,14 @@
 
         .brand-name .consultancy-regular {
             font-weight: 400;
-			color: #FB9B50;
+			color: #F5E6B3;
             font-family: 'Inter', sans-serif;
             letter-spacing: 0px;
         }
 
         .brand-subtitle {
             font-size: 10px;
-            color: #11224D;
+            color: #3e2c23;;
             text-transform: uppercase;
             letter-spacing: 1.2px;
             font-weight: 600;
@@ -115,7 +133,7 @@
 
         nav a {
             text-decoration: none;
-            color: #D9D9D9;
+            color: var(--gray);
             font-size: 14px;
             font-weight: 500;
             transition: all 0.3s ease;
@@ -126,8 +144,12 @@
         }
 
         nav a:hover {
-            color: #ffffff;
+            color: var(--black);
         }
+		
+		nav .cta-button:hover {
+			color: #ffffff;
+		}
 
         nav a::after {
             content: '';
@@ -136,7 +158,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: #ffffff;
+            color: var(--charcoal);
             transition: width 0.3s ease;
         }
 
@@ -145,7 +167,7 @@
         }
 
         nav a.active {
-            color: #ffffff;
+            color: var(--charcoal);
         }
 
         nav a.active::after {
@@ -154,69 +176,37 @@
 
         /* CTA Button */
         .cta-button {
-            background: linear-gradient(135deg, #FB9B50 0%, #E8930F 100%);
-            color: white;
-            padding: 12px 28px;
-            border: none;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: none;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            letter-spacing: 0.3px;
-            font-family: 'Inter', sans-serif;
-        }
+		  background: var(--black);
+		  color: white;
+		  border-radius: 0;
+		  padding: 14px 32px;
+		  text-decoration: none;
+		}
 
-        .cta-button:hover {
-            background: linear-gradient(135deg, #B8610B 0%, #C87209 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(216, 116, 14, 0.4);
-        }
+		.cta-button:hover {
+		  background: var(--charcoal);
+		}
 
         /* Hero Section - Full Screen with Background Image */
         .hero {
-            min-height: calc(100vh - 70px);
-            width: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://raw.githubusercontent.com/aconite14/KConsultation/653f1f9a864f0baad08250b328afb051147eb457/assets/images/hero-img.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            text-align: left;
-            color: white;
-            gap: 30px;
-            position: relative;
-            padding: 0 50px;
-			overflow: hidden;
+		  min-height: 100vh;
+		  background: 
+			linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+			url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085') center/cover no-repeat;
 
-        }
-		
-		@media (max-width: 768px) {
-			.hero {
-				height: calc(100vh - 100px);
-				background: 
-					linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-					url('https://raw.githubusercontent.com/aconite14/KConsultation/a3b0d2c212e4d157da23d712b64f059758cb6d08/assets/images/hero-img-Vertical.png');
-
-				background-size: cover;
-				background-position: bottom center;
-			}
+		  display: flex;
+		  align-items: center;
+		  padding: 0 60px;
 		}
+		
 
         .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(57, 103, 240, 0.3) 0%, rgba(216, 116, 14, 0.2) 100%);
-            z-index: 1;
-        }
+			background: linear-gradient(
+				135deg,
+				rgba(0,0,0,0.6),
+				rgba(62,44,35,0.4)
+			);
+		}
 
         .hero-content {
             position: relative;
@@ -237,7 +227,7 @@
         }
 
         .hero h1 {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 56px;
             font-weight: 700;
             margin-bottom: 20px;
@@ -246,6 +236,8 @@
             text-align: left;
             letter-spacing: -0.5px;
             line-height: 1.2;
+			color: #ffffff;
+			text-shadow: 0 4px 20px rgba(0,0,0,0.7);
         }
 
         @keyframes slideInDown {
@@ -269,6 +261,8 @@
             text-align: left;
             font-family: 'Inter', sans-serif;
             letter-spacing: 0.2px;
+			color: #ffffff;
+			text-shadow: 0 2px 10px rgba(0,0,0,0.6);
         }
 
         @keyframes slideInUp {
@@ -290,11 +284,17 @@
         }
 
         .hero .cta-button:hover {
-            background: linear-gradient(135deg, #B8610B 0%, #C87209 100%);
-        }
+			background: linear-gradient(
+				135deg,
+				#C9A227 0%,
+				#A67C00 100%
+			);
+			color: #ffffff; /* FIX */
+		}
 
         /* Sections */
         .section {
+			background: var(--off-white);
             padding: 80px 50px;
             max-width: 1400px;
             margin: 0 auto;
@@ -302,8 +302,8 @@
             animation: fadeInUp 0.8s ease-out forwards;
         }
 
-        /* Services Section */
-        .services-section {
+        /* products Section */
+        .products-section {
 			position: relative;
 
 			width: 100vw;
@@ -314,31 +314,33 @@
 			overflow: hidden;
 		}
 
-        .services-section h2 {
-            font-family: 'Inter', sans-serif;
+        .products-section h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 42px;
             font-weight: 700;
             margin-bottom: 50px;
-            color: #11224D;
+            color: #3e2c23;;
             letter-spacing: -0.3px;
             line-height: 1.2;
         }
 
-        .services-grid {
+        .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 10px;
         }
 
-        .service-card {
+        .product-card {
             background: white;
-            padding: 0px; 
+			border: 1px solid var(--light-gray);
+            padding: 10px; 
 			overflow: hidden;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             text-align: center;
             animation: scaleIn 0.6s ease-out forwards;
             opacity: 0;
+			border: 1px solid #eee;
         }
 
         @keyframes scaleIn {
@@ -352,30 +354,32 @@
             }
         }
 
-        .service-card:nth-child(1) { animation-delay: 0.1s; }
-        .service-card:nth-child(2) { animation-delay: 0.2s; }
-        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .product-card:nth-child(1) { animation-delay: 0.1s; }
+        .product-card:nth-child(2) { animation-delay: 0.2s; }
+        .product-card:nth-child(3) { animation-delay: 0.3s; }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(57, 103, 240, 0.2);
+        .product-card:hover {
+            transform: translateY(-8px);
+			border-color: var(--black);
+            box-shadow: 0 15px 40px rgba(62, 44, 35, 0.25);
         }
 
-        .service-icon {
+        .product-icon {
             font-size: 42px;
         }
 
-        .service-card h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 24px;
-            font-weight: 600;
+        .product-card h3 {
+           font-family: 'Playfair Display', serif;
+			font-size: 26px;
+			font-weight: 500;
+			letter-spacing: 0.5px;
 			margin-top: 15px;
             margin-bottom: 15px;
-            color: #11224D;
-            letter-spacing: 0px;
+            color: #3e2c23;;
+			text-transform: capitalize;
         }
 
-        .service-card p {
+        .product-card p {
             font-family: 'Inter', sans-serif;
             font-size: 15px;
             font-weight: 400;
@@ -385,32 +389,32 @@
 			padding: 20px;
         }
 		
-		.service-image {
+		.product-image {
 			width: 100%;
-			aspect-ratio: 3 / 2;
+			aspect-ratio: 2 / 3;
 			overflow: hidden;
 			position: relative;
 
-			margin-top: 20px;
+			margin-top: 0px;
 			border-radius: 1px;
 		}
 
-		.service-image img {
+		.product-image img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			transition: transform 0.4s ease;
 		}
 		
-		.service-card:hover .service-image img {
+		.product-card:hover .product-image img {
 			transform: scale(1.05);
 		}
 		
-		.service-content {
+		.product-content {
 			padding: 25px 20px;
 		}
 		
-		.service-image::after {
+		.product-image::after {
 			content: '';
 			position: absolute;
 			inset: 0;
@@ -420,6 +424,66 @@
 				rgba(0,0,0,0.4)
 			);
 		}
+		
+		.other-products {
+			margin-top: 80px;
+		}
+
+		.other-products h3 {
+			font-family: 'Playfair Display', serif;
+			font-size: 32px;
+			color: #3e2c23;
+			margin-bottom: 30px;
+		}
+
+		.other-products-grid {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			gap: 5px;
+		}
+		
+		.other-main {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.other-main img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.4s ease;
+		}
+
+		.other-main:hover img {
+			transform: scale(1.05);
+		}
+		
+		.other-list {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 5px;
+		}
+
+		.other-list img {
+			width: 100%;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+
+		.other-list img:hover {
+			transform: scale(1.05);
+		}
+		
+		@media (max-width: 768px) {
+			.other-products-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.other-main {
+				height: 300px;
+			}
+		}	
 
         /* About Section */
         .about-section {
@@ -436,7 +500,7 @@
 				rgba(20, 30, 60, 0.6) 60%,
 				rgba(20, 30, 60, 0.3) 100%
 			),
-			url('https://raw.githubusercontent.com/aconite14/KConsultation/df0af8eadb73c6907d93582d7504b3e6394d7c1c/assets/images/about-img.jpeg') center bottom/cover no-repeat;
+			url('https://raw.githubusercontent.com/aconite14/KLim.Coffee/62895821dd80efa552116e9eaf3705100544cf38/assets/images/cofee-img.jpg') center bottom/cover no-repeat;
 		}
 		
 		.container {
@@ -447,7 +511,7 @@
 
 
         .about-section h2 {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 42px;
             font-weight: 700;
             margin-bottom: 30px;
@@ -462,7 +526,7 @@
             background: white;
             padding: 50px 40px;
             box-shadow: 0 4px 20px rgba(57, 103, 240, 0.1);
-            border-left: 5px solid #FB9B50;
+            border-left: 5px solid #F5E6B3;
             line-height: 1.8;
             font-size: 16px;
             font-family: 'Inter', sans-serif;
@@ -482,11 +546,11 @@
         }
 
         .approach-section h2 {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 42px;
             font-weight: 700;
             margin-bottom: 50px;
-            color: #11224D;
+            color: #3e2c23;;
             letter-spacing: -0.3px;
             line-height: 1.2;
         }
@@ -528,7 +592,7 @@
         }
 
         .approach-number {
-            background: linear-gradient(180deg, #11224D 100%, #2952C3 0%);
+            background: linear-gradient(180deg, #3e2c23 0%, #1a1a1a 100%);
             color: white;
             font-size: 36px;
             font-weight: 700;
@@ -539,7 +603,7 @@
         }
 
         .approach-card:nth-child(2) .approach-number {
-            background: linear-gradient(0deg, #FB9B50 100%, #B8610B 0%);
+            background: linear-gradient(0deg, #F5E6B3 100%, #B8610B 0%);
         }
 
         .approach-content {
@@ -553,12 +617,12 @@
             font-weight: 600;
             margin-bottom: 15px;
             text-align: center;
-            color: #11224D;
+            color: #3e2c23;;
             letter-spacing: 0px;
         }
 
         .approach-card:nth-child(2) .approach-content h3 {
-            color: #FB9B50;
+            color: #F5E6B3;
         }
 
         .approach-content p {
@@ -590,11 +654,11 @@
 		}
 
         .why-us-section h2 {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 42px;
             font-weight: 700;
             margin-bottom: 50px;
-            color: #11224D;
+            color: #3e2c23;;
             text-align: center;
             letter-spacing: -0.3px;
             line-height: 1.2;
@@ -608,7 +672,7 @@
 		
 		.why-us-image {
 			position: relative;
-			background: url('https://raw.githubusercontent.com/aconite14/KConsultation/01fd1cb4377b5270d5440cbd974d950a13b86cc3/assets/images/why-us-img.jpeg') center/cover no-repeat;
+			background: url('https://raw.githubusercontent.com/aconite14/KLim.Coffee/e8462d11f43f50c88aa5877eb4ddfdfe10684ee7/assets/images/brew-img.webp') center/cover no-repeat;
 			height: 100%;
 			min-height: 500px;
 		}
@@ -626,7 +690,7 @@
             transition: all 0.3s ease;
             animation: slideInUp 0.6s ease-out forwards;
             opacity: 0;
-            border-left: 4px solid #FB9B50;
+            border-left: 4px solid #F5E6B3;
         }
 
         .why-us-item:nth-child(1) { animation-delay: 0.1s; }
@@ -650,7 +714,7 @@
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 8px;
-            color: #11224D;
+            color: #3e2c23;;
             letter-spacing: 0px;
         }
 
@@ -665,15 +729,34 @@
 
         /* Contact Section */
         .contact-section {
-            background: linear-gradient(135deg, #11224D 0%, #2952C3 100%);
-            color: white;
-            text-align: center;
-            padding: 80px 50px;
+			position: relative;
+
+			background:
+				linear-gradient(rgba(20,15,10,0.75), rgba(20,15,10,0.75)),
+				url('https://raw.githubusercontent.com/aconite14/KLim.Coffee/edc918aa757287cc7b386e2f665cd42e36e6eef9/assets/images/coffee-bg.jpg') center/cover no-repeat;
+
+			color: white;
+			text-align: center;
+			padding: 80px 50px;
         }
+		
+		.contact-section::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: radial-gradient(
+				circle at center,
+				transparent 30%,
+				rgba(0,0,0,0.6) 100%
+			);
+			z-index: 1;
+		}
 
         .contact-container {
             max-width: 900px;
             margin: 0 auto;
+			position: relative;
+			z-index: 2;
         }
 
         .contact-label {
@@ -697,7 +780,7 @@
         }
 
         .contact-title span {
-            background: linear-gradient(135deg, #FB9B50 0%, #E8930F 100%);
+            background: linear-gradient(135deg, #F5E6B3 0%, #F5E6B3 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -735,7 +818,7 @@
             text-align: center;
             font-size: 14px;
             font-family: 'Inter', sans-serif;
-            border-top: 3px solid #FB9B50;
+            border-top: 3px solid #F5E6B3;
             font-weight: 400;
             letter-spacing: 0.2px;
         }
@@ -821,7 +904,7 @@
 			z-index: 0;
 			height: 100%;
 			min-height: 500px;
-			background: url('https://raw.githubusercontent.com/aconite14/KConsultation/df0af8eadb73c6907d93582d7504b3e6394d7c1c/assets/images/about-img.jpeg') center/cover no-repeat;
+			background: url('https://raw.githubusercontent.com/aconite14/KLim.Coffee/62895821dd80efa552116e9eaf3705100544cf38/assets/images/cofee-img.jpg') center/cover no-repeat;
 		}
         
 		.bg-decor {
@@ -842,12 +925,13 @@
 			height: 50%;
 
 			background:
-				radial-gradient(at 20% 80%, rgba(59,130,246,0.25), transparent 60%),
-				radial-gradient(at 60% 70%, rgba(96,165,250,0.2), transparent 60%),
-				radial-gradient(at 80% 90%, rgba(37,99,235,0.2), transparent 60%),
-				radial-gradient(at 40% 85%, rgba(147,197,253,0.15), transparent 60%);
+				radial-gradient(at 20% 80%, rgba(111, 78, 55, 0.25), transparent 60%),
+				radial-gradient(at 60% 70%, rgba(164, 113, 72, 0.2), transparent 60%),
+				radial-gradient(at 80% 90%, rgba(62, 44, 35, 0.2), transparent 60%),
+				radial-gradient(at 40% 85%, rgba(200, 170, 140, 0.15), transparent 60%);
 
-			filter: blur(80px);
+			filter: blur(100px);
+			opacity: 0.7;
 			
 			mask-image: linear-gradient(
 				to top,
@@ -895,8 +979,8 @@
 
 			background: linear-gradient(
 				to right,
-				rgba(59,130,246,0.2),
-				rgba(96,165,250,0.1)
+				rgba(111, 78, 55, 0.25),
+				rgba(164, 113, 72, 0.2)
 			);
 
 			clip-path: polygon(
@@ -916,8 +1000,8 @@
 
 			background: linear-gradient(
 				to right,
-				rgba(37,99,235,0.15),
-				rgba(147,197,253,0.1)
+				rgba(111, 78, 55, 0.25),
+				rgba(164, 113, 72, 0.2)
 			);
 
 			clip-path: polygon(
@@ -937,8 +1021,8 @@
 
 			background: linear-gradient(
 				to right,
-				rgba(59,130,246,0.2),
-				rgba(96,165,250,0.1)
+				rgba(111, 78, 55, 0.25),
+				rgba(164, 113, 72, 0.2)
 			);
 
 			clip-path: polygon(
@@ -958,8 +1042,8 @@
 
 			background: linear-gradient(
 				to right,
-				rgba(37,99,235,0.15),
-				rgba(147,197,253,0.1)
+				rgba(111, 78, 55, 0.25),
+				rgba(164, 113, 72, 0.2)
 			);
 
 			clip-path: polygon(
@@ -979,8 +1063,8 @@
 
 			background: linear-gradient(
 				to right,
-				rgba(59,130,246,0.2),
-				rgba(96,165,250,0.1)
+				rgba(111, 78, 55, 0.25),
+				rgba(164, 113, 72, 0.2)
 			);
 
 			clip-path: polygon(
@@ -1000,8 +1084,8 @@
 
 			background: linear-gradient(
 				to right,
-				rgba(37,99,235,0.15),
-				rgba(147,197,253,0.1)
+				rgba(111, 78, 55, 0.25),
+				rgba(164, 113, 72, 0.2)
 			);
 
 			clip-path: polygon(
@@ -1105,7 +1189,6 @@
             .hero {
                 height: 100vh;
                 padding: 30px 20px;
-                align-items: flex-start;
                 justify-content: center;
             }
 
@@ -1118,10 +1201,6 @@
                 text-align: left;
             }
 
-            .hero p {
-                font-size: 16px;
-                text-align: left;
-            }
 
             .section {
                 padding: 40px 20px;
@@ -1149,21 +1228,17 @@
     <header>
         <div class="logo-section" onclick="scrollToSection('home')">
             <div class="logo-icon">
-                <img src="https://raw.githubusercontent.com/aconite14/KConsultation/main/assets/images/logo.svg" alt="KConsultancy Logo" />
+                <img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/logo.PNG" alt="KLIM Coffe Logo" />
             </div>
-            <div class="brand-text">
-                <div class="brand-name">
-                    <span class="k-bold">K</span><span class="consultancy-regular">Consultancy.asia</span>
-                </div>
-            </div>
+          
         </div>
 
         <nav>
             <a href="#home" class="nav-link" onclick="scrollToSection('home')">Home</a>
-            <a href="#services" class="nav-link" onclick="scrollToSection('services')">Services</a>
-            <a href="#approach" class="nav-link" onclick="scrollToSection('approach')">Our Approach</a>
+            <a href="#products" class="nav-link" onclick="scrollToSection('products')">Products</a>
+            <a href="#why-us" class="nav-link" onclick="scrollToSection('why-us')">Our Quality</a>
             <a href="#about" class="nav-link" onclick="scrollToSection('about')">About</a>
-            <a href="#contact" class="cta-button" onclick="scrollToSection('contact')">Get Consultation</a>
+            <a href="#contact" class="cta-button" onclick="scrollToSection('contact')">Buy Now</a>
         </nav>
     </header>
 
@@ -1185,24 +1260,21 @@
 						  opacity="1"/>
 				</svg>
 			</div>
-			<div class="wave wave-4"></div>
-			<div class="wave wave-5"></div>
-			<div class="wave wave-6"></div>
 		</div>
 		
         <div class="hero-content">
 		
-            <h1>Building Great Teams Through Strategy & Precision</h1>
-            <p>Strategic talent placement that goes beyond recruitment. We connect people, purpose, and potential with clarity and intention.</p>
+            <h1>Minimal. Bold. <br> Perfect Coffee.</h1>
+			<p>Crafted for those who appreciate simplicity & quality</p>
             <div class="hero-buttons">
-                <a href="#services" class="btn-outline" onclick="scrollToSection('services')">Our Services</a>
-                <a href="#contact" class="cta-button" onclick="scrollToSection('contact')">Get Consultation</a>
+                <a href="#products" class="cta-button" onclick="scrollToSection('products')">Our Products</a>
+                <a href="#contact" class="btn-outline" onclick="scrollToSection('contact')">Order Now</a>
             </div>
         </div>
     </section>
 	
-    <!-- Services Section -->
-    <section id="services" class="services-section">
+    <!-- products Section -->
+    <section id="products" class="products-section">
 	
 				<div class="bg-decor">
 					<div class="mesh2"></div>
@@ -1221,48 +1293,99 @@
 								  fill="none"
 								  opacity="0.7"/>
 						</svg>
-					<div class="wave wave-1"></div>
-					<div class="wave wave-2"></div>
-					<div class="wave wave-3"></div>
 					</div>	
 				</div>
 	
 	<div class="container">
-        <h2>What We Offer</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">🎯</div>
+
+        <h2>Featured Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+			
+                <h3>Guatemala</h3>
+				
 				<div class="divider"></div>
-				<h3>Strategic Talent Placement</h3>
-                <p>Carefully curated candidates aligned with your organizational vision, culture, and long-term goals. We prioritize quality over quantity.</p>
-				<div class="divider"></div>
-				<div class="service-image">
-					<img src="https://raw.githubusercontent.com/aconite14/KConsultation/eb672ddfcfa5aedcf6d4ea0bf7ffa873d703c710/assets/images/strategic-img.jpeg" alt="Strategic Talent Placement">
+				<div class="product-image">
+					<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/25.jpeg" alt="Strategic Talent Placement">
 				</div>
+				<div class="divider"></div>
+				
 			</div>
-            <div class="service-card">
-				<div class="service-icon">🔍︎</div>
+            <div class="product-card">
+			
+                <h3>Costa Rica</h3>
+				
 				<div class="divider"></div>
-                <h3>Executive Search</h3>
-                <p>In-depth recruitment for leadership positions. We understand your business needs and find leaders who can drive growth and vision.</p>
-				<div class="divider"></div>
-				<div class="service-image">
-					<img src="https://raw.githubusercontent.com/aconite14/KConsultation/eb672ddfcfa5aedcf6d4ea0bf7ffa873d703c710/assets/images/executive-img.jpeg" alt="Executive Search">
+				<div class="product-image">
+					<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/23.jpeg" alt="Strategic Talent Placement">
 				</div>
+				<div class="divider"></div>
+				
 			</div>
-            <div class="service-card">
-				<div class="service-icon">👥</div>
+            <div class="product-card">
+			
+                <h3>Colombia</h3>
 				<div class="divider"></div>
-                <h3>Workforce Development</h3>
-                <p>More than placement—we act as strategic partners in building stronger, more cohesive teams for sustainable success.</p>
-				<div class="divider"></div>
-				<div class="service-image">
-					<img src="https://raw.githubusercontent.com/aconite14/KConsultation/eb672ddfcfa5aedcf6d4ea0bf7ffa873d703c710/assets/images/workforce-img.jpeg" alt="Workforce Development">
+				<div class="product-image">
+					<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/26.jpeg" alt="Strategic Talent Placement">
 				</div>
-            </div>
+				<div class="divider"></div>
+				
+			</div>
         </div>
 	</div>
-    </section>
+	
+	<div class="container">
+		   <div class="other-products">
+			<h3>Other Products</h3>
+
+			<div class="other-products-grid">
+				<!-- BIG IMAGE -->
+				<div class="product-card">
+					<div class="other-main">
+						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/1.jpeg" alt="Main Product">
+					</div>
+				</div>
+
+				<!-- SMALL IMAGES -->
+				<div class="other-list">
+					<div class="product-card">
+						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/18.jpeg" alt="">
+					</div>
+					
+					<div class="product-card">
+						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/15.jpeg" alt="">
+					</div>
+					
+					<div class="product-card">
+						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/7.jpeg" alt="">
+					</div>
+					
+					<div class="product-card">
+						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/8.jpeg" alt="">
+					</div>
+					
+					<div class="product-card">
+						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/11.jpeg" alt="">
+					</div>
+					
+					<div class="product-card">
+						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/14.jpeg" alt="">
+					</div>
+					
+					<div class="product-card">
+						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/16.jpeg" alt="">
+					</div>
+					
+					<div class="product-card">
+						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/24.jpeg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+   </section>
 	
     <!-- Why Choose Us Section -->
     <section id="why-us" class="why-us-section">
@@ -1285,37 +1408,34 @@
 								  opacity="1"/>
 						</svg>
 					</div>
-					<div class="wave wave-2"></div>
-					<div class="wave wave-3"></div>
-					<div class="wave wave-4"></div>
 				</div>
 				
 				<div class="container">
-					<h2>Why Choose KConsultancy?</h2>
+					<h2>Why KLIM Coffee?</h2>
 					<div class="why-us-wrapper">
 							<div class="why-us-list">
 								<div class="why-us-item">
 									<div class="why-us-text">
-										<h3>Strategic Partnership</h3>
-										<p>We act as strategic partners in your workforce development, not just service providers. Your success is our mission.</p>
+										<h3>Premium Beans</h3>
+										<p>Sourced from carefully selected farms around the world.</p>
 									</div>
 								</div>
 								<div class="why-us-item">
 									<div class="why-us-text">
-										<h3>Intentional Connections</h3>
-										<p>Every introduction is made with purpose. We ensure both company and candidate are positioned for meaningful, long-term success.</p>
+									<h3>Freshly Roasted</h3>
+									<p>Roasted in small batches to preserve flavor and aroma.</p>
 									</div>
 								</div>
 								<div class="why-us-item">
 									<div class="why-us-text">
-										<h3>Quality-Focused Process</h3>
-										<p>Our commitment to quality means you receive candidates who are truly ready, not just available. Every placement reflects our high standards.</p>
+										<h3>Minimal Process</h3>
+										<p>We keep things simple to highlight the natural character of coffee.</p>
 									</div>
 								</div>
 								<div class="why-us-item">
 									<div class="why-us-text">
-										<h3>Deep Industry Expertise</h3>
-										<p>We understand the nuances of your industry and the specific skills and personalities needed for your organization to thrive.</p>
+										<h3>Consistent Quality</h3>
+										<p>Every cup reflects our commitment to precision and balance.</p>
 									</div>
 								</div>
 							</div>
@@ -1326,57 +1446,7 @@
 			</div>
     </section>
 	
-    <!-- Approach Section -->
-    <section id="approach" class="section approach-section">
-        
-		<div class="bg-decor">
-			<div class="mesh2"></div>
-			<div class="mesh"></div>
-			<div class="scribble">
-				<svg viewBox="0 0 1440 400" preserveAspectRatio="none">
-					<path d="M0,300 C200,200 400,350 600,250 C800,150 1000,350 1200,250 C1300,200 1400,300 1440,280"
-						  stroke="white"
-						  stroke-width="2"
-						  fill="none"
-						  opacity="1"/>
-
-					<path d="M0,320 C300,250 500,300 700,280 C900,260 1100,320 1440,260"
-						  stroke="white"
-						  stroke-width="1"
-						  fill="none"
-						  opacity="1"/>
-				</svg>
-			</div>
-			<div class="wave wave-3`"></div>
-			<div class="wave wave-1"></div>
-			<div class="wave wave-6"></div>
-		</div>
-		
-		<h2>Our Three-Pillar Approach</h2>
-	        <div class="approach-grid">
-            <div class="approach-card">
-                <div class="approach-number">1</div>
-                <div class="approach-content">
-                    <h3>Deep Understanding</h3>
-                    <p>We invest time in understanding your organization—your vision, culture, values, structure, and long-term goals. This clarity guides every recommendation.</p>
-                </div>
-            </div>
-            <div class="approach-card">
-                <div class="approach-number">2</div>
-                <div class="approach-content">
-                    <h3>Candidate-Centric Care</h3>
-                    <p>We look beyond résumés to understand motivations, strengths, and aspirations. We ensure candidates find opportunities where they can truly grow.</p>
-                </div>
-            </div>
-            <div class="approach-card">
-                <div class="approach-number">3</div>
-                <div class="approach-content">
-                    <h3>Quality Over Quantity</h3>
-                    <p>Rather than presenting large pools of options, we deliver carefully curated talent that meets high standards of fit and readiness.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  
 		
     <!-- About Section -->
     <section id="about" class="section about-section">
@@ -1384,24 +1454,24 @@
 		<div class="container">
 			<!-- TEXT -->
 			<div class="about-text">
-				<h2>Who We Are</h2>
+				<h2>About KLIM Coffee</h2>
 
 				<p class="about-highlight">
-					Great teams are not built by chance, but through clarity, understanding, and precision.
+					Coffee, reduced to its purest form.
 				</p>
 
 				<p>
-					KConsultancy takes a strategic approach to talent placement, going beyond traditional recruitment 
-					to deeply understand each organization’s vision, culture, and long-term goals.
+					KLIM Coffee is built on a simple idea — great coffee doesn’t need to be complicated.
+					We focus on what truly matters: quality beans, precise roasting, and a clean experience.
 				</p>
 
 				<p>
-					We see hiring not as filling roles, but as shaping the foundation of a company’s future. 
-					Every recommendation we make is intentional and aligned.
+					Every selection is intentional. Every roast is crafted to highlight the natural character of the bean,
+					without unnecessary noise.
 				</p>
 
 				<p>
-					We treat every candidate with equal care—creating connections that are meaningful and sustainable.
+					Minimal in approach, bold in taste — that’s the essence of KLIM.
 				</p>
 			</div>
 		</div>
@@ -1412,20 +1482,19 @@
     <section id="contact" class="contact-section">
         <div class="contact-container">
             
-            <p class="contact-label">— GET IN TOUCH —</p>
+            <p class="contact-label">— ORDER NOW —</p>
             
             <h2 class="contact-title">
-                Begin Your <span>Partnership</span><br>
-                With Confidence
+                Start Your <span>Coffee Experience!</span>
             </h2>
 
             <p class="contact-desc">
-                Whether you're building a high-performing team or exploring your next opportunity,
-                KConsultancy is here to guide you with clarity and precision.
+                Discover carefully selected beans, roasted to bring out the best in every cup.  
+				Simple, bold, and crafted for those who value quality.
             </p>
 
             <div class="contact-info">
-                <a href="https://wa.me/6593752892" class="cta-button" onclick="https://wa.me/6593752892">Contact Us on Whatsapp</a>
+                <a href="https://wa.me/6593752892" class="cta-button" onclick="https://wa.me/6593752892">Order via WhatsApp</a>
 
             </div>
         </div>
@@ -1433,7 +1502,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 KConsultancy.asia All rights reserved. | Strategic Manpower Solutions</p>
+        <p>&copy; 2026 KLIM Coffee All rights reserved. | Strategic Manpower Solutions</p>
     </footer>
 
     <script>
