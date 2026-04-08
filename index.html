@@ -6,16 +6,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KLIM.COFFEE — Minimal. Bold. Perfect Coffee.</title>
+    <title>AROMA COFFEE.ASIA — Authentic Coffee.</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
 	
 	:root {
-		  --black: #111111;
-		  --charcoal: #222222;
+		  --black: #7A3E2C;
+		  --charcoal: #A0522D;
 		  --gray: #777777;
-		  --light-gray: #e5e5e5;
+		  --light-gray: #D68A4A;
 		  --off-white: #f8f8f8;
 		}
 
@@ -70,7 +70,7 @@
         }
 
         .logo-icon {
-            width: 50px;
+            width: 80px;
             height: 50px;
             display: flex;
             align-items: center;
@@ -192,7 +192,7 @@
 		  min-height: 100vh;
 		  background: 
 			linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-			url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085') center/cover no-repeat;
+			url('https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/9de5ff5f3031c699afb8c3efc7f88da825b01294/assets/images/hero-bg.png') center/cover no-repeat;
 
 		  display: flex;
 		  align-items: center;
@@ -292,204 +292,229 @@
 			color: #ffffff; /* FIX */
 		}
 
-        /* Sections */
-        .section {
-			background: var(--off-white);
-            padding: 80px 50px;
-            max-width: 1400px;
-            margin: 0 auto;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        /* products Section */
-        .products-section {
+		 /* =========================
+		   PRODUCTS SECTION
+		========================= */
+		.products-section {
 			position: relative;
-
 			width: 100vw;
-			left: 50%;
-			margin-left: -50vw;
-
 			padding: 100px 0;
 			overflow: hidden;
 		}
 
-        .products-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 50px;
-            color: #3e2c23;;
-            letter-spacing: -0.3px;
-            line-height: 1.2;
-        }
+		/* HEADER */
+		.products-container {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
 
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 10px;
-        }
+		.products-header {
+			text-align: center;
+			margin-bottom: 80px;
+		}
 
-        .product-card {
-            background: white;
-			border: 1px solid var(--light-gray);
-            padding: 10px; 
-			overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            text-align: center;
-            animation: scaleIn 0.6s ease-out forwards;
-            opacity: 0;
-			border: 1px solid #eee;
-        }
+		.products-header h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 42px;
+			margin-bottom: 10px;
+			color: #2C1A14;
+		}
 
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
+		.products-header p {
+			color: #777;
+			font-size: 16px;
+		}
 
-        .product-card:nth-child(1) { animation-delay: 0.1s; }
-        .product-card:nth-child(2) { animation-delay: 0.2s; }
-        .product-card:nth-child(3) { animation-delay: 0.3s; }
+		/* =========================
+		   PRODUCT LIST (NEW STYLE)
+		========================= */
+		.products-list {
+			display: flex;
+			flex-direction: column;
+			gap: 100px;
+		}
 
-        .product-card:hover {
-            transform: translateY(-8px);
-			border-color: var(--black);
-            box-shadow: 0 15px 40px rgba(62, 44, 35, 0.25);
-        }
+		/* ITEM */
+		.product-item {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 60px;
+			align-items: center;
+		}
 
-        .product-icon {
-            font-size: 42px;
-        }
+		/* alternating */
+		.product-item.reverse {
+			direction: rtl;
+		}
 
-        .product-card h3 {
-           font-family: 'Playfair Display', serif;
-			font-size: 26px;
-			font-weight: 500;
-			letter-spacing: 0.5px;
-			margin-top: 15px;
-            margin-bottom: 15px;
-            color: #3e2c23;;
-			text-transform: capitalize;
-        }
+		.product-item.reverse .product-info {
+			direction: ltr;
+		}
 
-        .product-card p {
-            font-family: 'Inter', sans-serif;
-            font-size: 15px;
-            font-weight: 400;
-            color: #555;
-            line-height: 1.7;
-            letter-spacing: 0.2px;
-			padding: 20px;
-        }
-		
+		/* IMAGE */
 		.product-image {
 			width: 100%;
-			aspect-ratio: 2 / 3;
+			height: 500px;
 			overflow: hidden;
 			position: relative;
-
-			margin-top: 0px;
-			border-radius: 1px;
 		}
 
 		.product-image img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			transition: transform 0.4s ease;
+			transition: transform 0.6s ease;
 		}
-		
-		.product-card:hover .product-image img {
+
+		.product-item:hover img {
 			transform: scale(1.05);
 		}
-		
-		.product-content {
-			padding: 25px 20px;
+
+		/* TEXT */
+		.product-origin {
+			font-size: 12px;
+			letter-spacing: 2px;
+			color: #A67C00;
+			text-transform: uppercase;
 		}
-		
-		.product-image::after {
-			content: '';
-			position: absolute;
-			inset: 0;
-			background: linear-gradient(
-				to bottom,
-				rgba(0,0,0,0.1),
-				rgba(0,0,0,0.4)
-			);
+
+		.product-info h3 {
+			font-size: 32px;
+			margin: 10px 0;
+			color: #2C1A14;
 		}
-		
+
+		.product-info p {
+			font-size: 16px;
+			color: #555;
+			line-height: 1.7;
+			max-width: 400px;
+		}
+
+		/* =========================
+		   OTHER PRODUCTS (GALLERY)
+		========================= */
 		.other-products {
 			margin-top: 80px;
+			padding: 0 20px;
 		}
 
 		.other-products h3 {
 			font-family: 'Playfair Display', serif;
-			font-size: 32px;
-			color: #3e2c23;
+			font-size: 28px;
 			margin-bottom: 30px;
+			color: #2C1A14;
+			text-align: center;
 		}
 
+		/* GRID */
 		.other-products-grid {
 			display: grid;
-			grid-template-columns: 2fr 1fr;
-			gap: 5px;
+			grid-template-columns: 1fr 2fr;
+			gap: 12px;
+			align-items: stretch;
 		}
-		
+
+		/* BIG IMAGE */
 		.other-main {
 			width: 100%;
-			height: 100%;
+			aspect-ratio: 1 / 1;
 			overflow: hidden;
 		}
 
+		/* BIG (full, no crop) */
 		.other-main img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.5s ease;
+		}
+
+		/* SMALL (tetap aesthetic grid) */
+		.other-list {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr); /* 4 ke samping */
+			gap: 12px;
+		}
+
+		.other-list img {
+			width: 100%;
+			aspect-ratio: 1 / 1;
+			object-fit: cover;
+			transition: transform 0.4s ease;
+		}
+
+		/* SMALL GRID (8 items) */
+		.other-list {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr); /* 4 ke samping */
+			grid-auto-rows: 1fr;
+			gap: 10px;
+			height: auto;
+		}
+
+		.other-list img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			transition: transform 0.4s ease;
 		}
 
-		.other-main:hover img {
-			transform: scale(1.05);
-		}
-		
-		.other-list {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 5px;
-		}
-
-		.other-list img {
-			width: 100%;
-			object-fit: cover;
-			transition: transform 0.3s ease;
-		}
-
+		/* HOVER */
+		.other-main:hover img,
 		.other-list img:hover {
 			transform: scale(1.05);
 		}
 		
+		.other-products-container {
+			max-width: 1200px;   
+			margin: 0 auto;
+		}
+
+		/* =========================
+		   RESPONSIVE
+		========================= */
 		@media (max-width: 768px) {
+
+			.product-item {
+				grid-template-columns: 1fr;
+				gap: 30px;
+				margin: 30px;
+			}
+
+			.product-item.reverse {
+				direction: ltr;
+			}
+
+			.product-image {
+				height: 300px;
+			}
+
+			.products-list {
+				gap: 60px;
+			}
+
 			.other-products-grid {
 				grid-template-columns: 1fr;
+				max-height: none;
 			}
 
 			.other-main {
-				height: 100%;
+				height: 220px;
 			}
-		}	
+
+			.other-list {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 8px;
+			}
+		}
+		
 
         /* About Section */
         .about-section {
 			max-width: none !important;
 			margin: 0 !important;
-			width: 100%;
+			width: 100% !important;
 
 			padding-left: 0 !important;
 			padding-right: 0 !important;
@@ -500,13 +525,13 @@
 				rgba(111, 78, 55, 0.7) 60%,
 				rgba(200, 170, 140, 0.2) 100%
 			),
-			url('https://raw.githubusercontent.com/aconite14/KLim.Coffee/62895821dd80efa552116e9eaf3705100544cf38/assets/images/cofee-img.jpg') center bottom/cover no-repeat;
+			url('https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/75b69ff411ca0b4a0634f90f3e1b245eed29984e/assets/images/about-img.png') center/cover no-repeat;
 		}
 		
 		.container {
 			max-width: 1200px;
 			margin: 0 auto;
-			padding: 0 40px;
+			padding: 50px 40px;
 		}
 
 
@@ -637,7 +662,8 @@
         /* Why Us Section */
         .why-us-section {
 			position: relative;
-
+			
+    z-index: 1;
 			width: 100vw;
 			left: 50%;
 			margin-left: -50vw;
@@ -654,10 +680,32 @@
 		}
 
         .why-us-section h2 {
+            font-family: 'inter', serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #3e2c23;;
+            text-align: center;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+        }
+		
+		.why-us-section h3 {
             font-family: 'Playfair Display', serif;
             font-size: 42px;
             font-weight: 700;
-            margin-bottom: 50px;
+            margin-bottom: 12px;
+            color: #3e2c23;;
+            text-align: center;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+        }
+		
+		.why-us-section h4 {
+            font-family: 'inter', serif;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 48px;
             color: #3e2c23;;
             text-align: center;
             letter-spacing: -0.3px;
@@ -704,12 +752,42 @@
         }
 
         .why-us-icon {
-            font-size: 32px;
-            min-width: 50px;
-            text-align: center;
-        }
+			width: 50px;
+			height: 50px;
+			min-width: 50px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			border-radius: 12px;
+
+			background: linear-gradient(
+				135deg,
+				rgba(214,138,74,0.12),
+				rgba(122,62,44,0.12)
+			);
+
+			overflow: hidden;
+		}
+
+		.why-us-icon img {
+			width: 60%;
+			height: 60%;
+			object-fit: contain;
+			filter: contrast(1.1) brightness(0.9);
+		}
 
         .why-us-text h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #3e2c23;;
+            letter-spacing: 0px;
+        }
+		
+		.why-us-text h2 {
             font-family: 'Inter', sans-serif;
             font-size: 18px;
             font-weight: 600;
@@ -726,6 +804,82 @@
             line-height: 1.7;
             letter-spacing: 0.2px;
         }
+		
+		.why-us-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			text-align: center;
+			z-index: 1;
+		}
+
+		.why-us-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 30px;
+			z-index: 2;
+		}
+
+		.why-us-card {
+			background: #ffffff;
+			padding: 40px 25px;
+			border-radius: 16px;
+			text-align: center;
+			
+    z-index: 1;
+
+			transition: all 0.3s ease;
+			border: 1px solid rgba(122, 62, 44, 0.08);
+		}
+
+		.why-us-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+		}
+
+		/* ICON DI TENGAH ATAS */
+		.why-us-icon {
+			width: 70px;
+			height: 70px;
+			margin: 0 auto 20px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transform: translateY(-10px);
+			border-radius: 0;
+			background: none;
+		}
+
+		.why-us-icon img {
+			width: 50%;
+			height: 50%;
+			object-fit: contain;
+		}
+
+		/* TEXT */
+		.why-us-card h3 {
+			font-size: 18px;
+			color: #2C1A14;
+			margin-bottom: 10px;
+		}
+
+		.why-us-card p {
+			font-size: 14px;
+			color: #6b6b6b;
+			line-height: 1.6;
+		}
+		
+		@media (max-width: 1024px) {
+			.why-us-grid {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		@media (max-width: 600px) {
+			.why-us-grid {
+				grid-template-columns: 1fr;
+			}
+		}
 
         /* Contact Section */
         .contact-section {
@@ -733,7 +887,7 @@
 
 			background:
 				linear-gradient(rgba(20,15,10,0.75), rgba(20,15,10,0.75)),
-				url('https://raw.githubusercontent.com/aconite14/KLim.Coffee/edc918aa757287cc7b386e2f665cd42e36e6eef9/assets/images/coffee-bg.jpg') center/cover no-repeat;
+				url('https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/579f64a17a92d4d7ca5ce6fe35028ef745c97ffe/assets/images/contact-img.png') center/cover no-repeat;
 
 			color: white;
 			text-align: center;
@@ -809,6 +963,37 @@
             font-weight: 500;
             letter-spacing: 0.2px;
         }
+		
+		.contact-buttons {
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			margin-top: 30px;
+			flex-wrap: wrap;
+		}
+
+		.contact-trust {
+			margin-top: 30px;
+			display: flex;
+			justify-content: center;
+			gap: 25px;
+			flex-wrap: wrap;
+			font-size: 14px;
+			opacity: 0.85;
+		}
+
+		.contact-trust span {
+			position: relative;
+			padding-left: 18px;
+		}
+
+		.contact-trust span::before {
+			content: "✓";
+			position: absolute;
+			left: 0;
+			color: #F5E6B3;
+			font-weight: bold;
+		}
 
         /* Footer */
         footer {
@@ -1230,16 +1415,16 @@
     <header>
         <div class="logo-section" onclick="scrollToSection('home')">
             <div class="logo-icon">
-                <img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/logo.PNG" alt="KLIM Coffe Logo" />
+                <img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/75b69ff411ca0b4a0634f90f3e1b245eed29984e/assets/images/logo.png" alt="AROMA COFFEE.ASIA Logo" />
             </div>
           
         </div>
 
         <nav>
             <a href="#home" class="nav-link" onclick="scrollToSection('home')">Home</a>
+            <a href="#about" class="nav-link" onclick="scrollToSection('about')">About</a>
             <a href="#products" class="nav-link" onclick="scrollToSection('products')">Products</a>
             <a href="#why-us" class="nav-link" onclick="scrollToSection('why-us')">Our Quality</a>
-            <a href="#about" class="nav-link" onclick="scrollToSection('about')">About</a>
             <a href="#contact" class="cta-button" onclick="scrollToSection('contact')">Buy Now</a>
         </nav>
     </header>
@@ -1266,14 +1451,40 @@
 		
         <div class="hero-content">
 		
-            <h1>Minimal. Bold. <br> Perfect Coffee.</h1>
-			<p>Crafted for those who appreciate simplicity & quality</p>
+            <h1>Crafting Premium Coffee Experience from Asia</h1>
+			<p>Single origin beans, roasted to perfection.</p>
             <div class="hero-buttons">
-                <a href="#products" class="cta-button" onclick="scrollToSection('products')">Our Products</a>
-                <a href="#contact" class="btn-outline" onclick="scrollToSection('contact')">Order Now</a>
+                <a href="#products" class="cta-button" onclick="scrollToSection('products')">Explore Coffee</a>
+                <a href="#about" class="btn-outline" onclick="scrollToSection('about')">Our Story</a>
             </div>
         </div>
     </section>
+	
+  
+		
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+		<div class="about-wrapper">
+		<div class="container">
+			<!-- TEXT -->
+			<div class="about-text">
+				<h2>Who we are?</h2>
+
+				<p class="about-highlight">
+					Rooted in Passion, Crafted in Every Bean
+				</p>
+
+				<p>
+					Aroma Coffee Asia is more than just coffee — it's a journey through the rich landscapes of Asian coffee culture. We carefully source our beans from selected farms, ensuring every harvest carries authenticity, quality, and sustainability.
+				</p>
+
+				<p>
+					With a dedication to precision roasting and deep appreciation for flavor, we transform raw beans into a refined coffee experience that speaks to both tradition and modern taste.
+				</p>
+			</div>
+		</div>
+		</div>
+	</section>
 	
     <!-- products Section -->
     <section id="products" class="products-section">
@@ -1298,98 +1509,92 @@
 					</div>	
 				</div>
 	
-	<div class="container">
+				<div class="products-container">
 
-        <h2>Featured Products</h2>
-        <div class="products-grid">
-            <div class="product-card">
-			
-                <h3>Guatemala</h3>
-				
-				<div class="divider"></div>
-				<div class="product-image">
-					<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/25.jpeg" alt="Strategic Talent Placement">
-				</div>
-				<div class="divider"></div>
-				
-			</div>
-            <div class="product-card">
-			
-                <h3>Costa Rica</h3>
-				
-				<div class="divider"></div>
-				<div class="product-image">
-					<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/23.jpeg" alt="Strategic Talent Placement">
-				</div>
-				<div class="divider"></div>
-				
-			</div>
-            <div class="product-card">
-			
-                <h3>Colombia</h3>
-				<div class="divider"></div>
-				<div class="product-image">
-					<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/26.jpeg" alt="Strategic Talent Placement">
-				</div>
-				<div class="divider"></div>
-				
-			</div>
-        </div>
-	</div>
-	
-	<div class="container">
-		   <div class="other-products">
-			<h3>Other Products</h3>
+					<div class="products-header">
+					  <h2>Our Coffee Selection</h2>
+					  <p>Carefully sourced. Thoughtfully roasted.</p>
+					</div>
 
-			<div class="other-products-grid">
-				<!-- BIG IMAGE -->
-				<div class="product-card">
-					<div class="other-main">
-						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/30b345a1c3316a063a8db8a6b864bff70e42914a/assets/images/main-item.png" alt="Main Product">
-					</div>
-				</div>
+					<div class="products-list">
 
-				<!-- SMALL IMAGES -->
-				<div class="other-list">
-					<div class="product-card">
-						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/61c4faa7f789283233e5a707fd18e90c859c6008/assets/images/15.jpeg" alt="">
+					  <!-- PRODUCT 1 -->
+					  <div class="product-item">
+						<div class="product-image">
+						  <img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/1f8ead7326afcf1e8c46191506ed9d964d506fc5/assets/images/p1-img.jpeg" alt="Colombia Coffee">
+						</div>
+						<div class="product-info">
+						  <span class="product-origin">Colombia</span>
+							<h3>Colombia Arabica</h3>
+							<p>
+							A smooth and well-balanced coffee with a mellow body and subtle sweetness. 
+							Notes of cocoa and toasted nuts create a comforting cup, perfect for any time of the day.
+							</p>
+						</div>
+					  </div>
+
+					  <!-- PRODUCT 2 -->
+					  <div class="product-item reverse">
+						<div class="product-image">
+						  <img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/1f8ead7326afcf1e8c46191506ed9d964d506fc5/assets/images/p2-img.jpeg" alt="Ethiopia Coffee">
+						</div>
+						<div class="product-info">
+						  <span class="product-origin">Ethiopia</span>
+							<h3>Ethiopia Arabica</h3>
+							<p>
+							Delicate and aromatic with bright acidity and floral notes. 
+							Hints of citrus and tea-like elegance bring a refined and uplifting coffee experience.
+							</p>
+						</div>
+					  </div>
+
+					  <!-- PRODUCT 3 -->
+					  <div class="product-item">
+						<div class="product-image">
+						  <img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/1f8ead7326afcf1e8c46191506ed9d964d506fc5/assets/images/p3-img.jpeg" alt="Costa Rica Coffee">
+						</div>
+						<div class="product-info">
+						  <span class="product-origin">Costa Rica</span>
+							<h3>Costa Rica Arabica</h3>
+							<p>
+							Clean and vibrant with a silky body and natural sweetness. 
+							Caramel and honey notes blend beautifully with a crisp, refreshing finish.
+							</p>
+						</div>
+					  </div>
+
 					</div>
-					
-					<div class="product-card">
-						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/386646b1ec4db9511ca5013762847303eda8e11b/assets/images/16.jpg" alt="">
-					</div>
-					
-					<div class="product-card">
-						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/7.jpeg" alt="">
-					</div>
-					
-					<div class="product-card">
-						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/9ee44302e15e37f82cc1f83af410a28d98e9a3f1/assets/images/8.jpeg" alt="">
-					</div>
-					
-					<div class="product-card">
-						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/ad9513eb448e2aee8e4bda5eee6273b0a7d50bf5/assets/images/11.jpeg" alt="">
-					</div>
-					
-					<div class="product-card">
-						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/ad9513eb448e2aee8e4bda5eee6273b0a7d50bf5/assets/images/27.jpeg" alt="">
-					</div>
-					
-					<div class="product-card">
-						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/ad9513eb448e2aee8e4bda5eee6273b0a7d50bf5/assets/images/20.jpeg" alt="">
-					</div>
-					
-					<div class="product-card">
-						<img src="https://raw.githubusercontent.com/aconite14/KLim.Coffee/ad9513eb448e2aee8e4bda5eee6273b0a7d50bf5/assets/images/24.jpeg" alt="">
-					</div>
-					
-					
-				</div>
-			</div>
-		</div>
-	</div>
-	
+				  </div>
+						
+						<div class="other-products">
+							<div class="other-products-container">
+							  <h3>Other Selections</h3>
+
+							  <div class="other-products-grid">
+								
+								<!-- BIG IMAGE -->
+								<div class="other-main">
+								  <img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/9dfe8112ee45a3e2d8a6f8e5959d89f5d09fd47a/assets/images/etc-1.jpeg" alt="Other Coffee">
+								</div>
+
+								<!-- SMALL GRID -->
+								<div class="other-list">
+								  <img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/9dfe8112ee45a3e2d8a6f8e5959d89f5d09fd47a/assets/images/etc-2.jpeg" alt="">
+								  <img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/9dfe8112ee45a3e2d8a6f8e5959d89f5d09fd47a/assets/images/etc-3.jpeg" alt="">
+								  <img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/9dfe8112ee45a3e2d8a6f8e5959d89f5d09fd47a/assets/images/etc-4.jpeg" alt="">
+								  <img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/9dfe8112ee45a3e2d8a6f8e5959d89f5d09fd47a/assets/images/etc-5.jpeg" alt="">
+								  <img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/9dfe8112ee45a3e2d8a6f8e5959d89f5d09fd47a/assets/images/etc-6.jpeg" alt="">
+								  <img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/9dfe8112ee45a3e2d8a6f8e5959d89f5d09fd47a/assets/images/etc-7.jpeg" alt="">
+								  <img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/9dfe8112ee45a3e2d8a6f8e5959d89f5d09fd47a/assets/images/etc-8.jpeg" alt="">
+								  <img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/9dfe8112ee45a3e2d8a6f8e5959d89f5d09fd47a/assets/images/etc-9.jpeg" alt="">
+								</div>
+
+							  </div>
+							</div>
+						</div>
+						
    </section>
+   
 	
     <!-- Why Choose Us Section -->
     <section id="why-us" class="why-us-section">
@@ -1414,73 +1619,49 @@
 					</div>
 				</div>
 				
-				<div class="container">
-					<h2>Why KLIM.COFFEE?</h2>
-					<div class="why-us-wrapper">
-							<div class="why-us-list">
-								<div class="why-us-item">
-									<div class="why-us-text">
-										<h3>Premium Beans</h3>
-										<p>Sourced from carefully selected farms around the world.</p>
-									</div>
-								</div>
-								<div class="why-us-item">
-									<div class="why-us-text">
-									<h3>Freshly Roasted</h3>
-									<p>Roasted in small batches to preserve flavor and aroma.</p>
-									</div>
-								</div>
-								<div class="why-us-item">
-									<div class="why-us-text">
-										<h3>Minimal Process</h3>
-										<p>We keep things simple to highlight the natural character of coffee.</p>
-									</div>
-								</div>
-								<div class="why-us-item">
-									<div class="why-us-text">
-										<h3>Consistent Quality</h3>
-										<p>Every cup reflects our commitment to precision and balance.</p>
-									</div>
-								</div>
+				<div class="why-us-container">
+					<h2>Why Choose Us</h2>
+					<h3>Authentic Asian Origin</h3>
+					<h4>We bring you the rich and diverse taste of Asia’s finest coffee regions.</h4>
+
+					<div class="why-us-grid">
+
+						<div class="why-us-card">
+							<div class="why-us-icon">
+								<img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/68760b3542de40038ebd233cc32fb5a0f3c01383/assets/images/ethically-img.png">
 							</div>
-						
-						 <!-- RIGHT: IMAGE -->
-						<div class="why-us-image"></div>
+							<h3>Ethically Sourced</h3>
+							<p>We partner with trusted farms across Asia, ensuring sustainability and fair practices.</p>
+						</div>
+
+						<div class="why-us-card">
+							<div class="why-us-icon">
+								<img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/68760b3542de40038ebd233cc32fb5a0f3c01383/assets/images/precision-img.png">
+							</div>
+							<h3>Precision Roasting</h3>
+							<p>Every batch is roasted with care to unlock its full flavor and aroma.</p>
+						</div>
+
+						<div class="why-us-card">
+							<div class="why-us-icon">
+								<img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/68760b3542de40038ebd233cc32fb5a0f3c01383/assets/images/authentic-img.png">
+							</div>
+							<h3>Authentic Asian Origin</h3>
+							<p>Experience the rich taste of Asia’s finest coffee regions.</p>
+						</div>
+
+						<div class="why-us-card">
+							<div class="why-us-icon">
+								<img src="https://raw.githubusercontent.com/aconite14/AROMA-COFFEE.ASIA/68760b3542de40038ebd233cc32fb5a0f3c01383/assets/images/premium-img.png">
+							</div>
+							<h3>Premium Quality</h3>
+							<p>From bean selection to final brew, quality is at the heart of everything we do.</p>
+						</div>
+
+					</div>
 				</div>
-			</div>
     </section>
-	
-  
-		
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-		<div class="about-wrapper">
-		<div class="container">
-			<!-- TEXT -->
-			<div class="about-text">
-				<h2>About KLIM.COFFEE</h2>
 
-				<p class="about-highlight">
-					Coffee, reduced to its purest form.
-				</p>
-
-				<p>
-					KLIM.COFFEE is built on a simple idea — great coffee doesn’t need to be complicated.
-					We focus on what truly matters: quality beans, precise roasting, and a clean experience.
-				</p>
-
-				<p>
-					Every selection is intentional. Every roast is crafted to highlight the natural character of the bean,
-					without unnecessary noise.
-				</p>
-
-				<p>
-					Minimal in approach, bold in taste — that’s the essence of KLIM.
-				</p>
-			</div>
-		</div>
-		</div>
-	</section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
@@ -1489,24 +1670,30 @@
             <p class="contact-label">— ORDER NOW —</p>
             
             <h2 class="contact-title">
-                Start Your <span>Coffee Experience!</span>
+                Experience Coffee Like <span>Never Before</span>
             </h2>
 
             <p class="contact-desc">
-                Discover carefully selected beans, roasted to bring out the best in every cup.  
-				Simple, bold, and crafted for those who value quality.
+                Carefully selected beans. Expertly roasted. Delivered fresh to you.  
+            Start your premium coffee journey today.
             </p>
 
             <div class="contact-info">
                 <a href="https://wa.me/6593752892" class="cta-button" onclick="https://wa.me/6593752892">Order via WhatsApp</a>
-
             </div>
+			
+			<div class="contact-trust">
+				<span>Premium Quality</span>
+				<span>Fresh Roast</span>
+				<span>Fast Response</span>
+			</div>
+			
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 KLIM.COFFEE All rights reserved. | Specialty Coffee, Simplified</p>
+        <p>&copy; 2026 AROMA COFFEE.ASIA All rights reserved. | Authentic Coffee</p>
     </footer>
 
     <script>
